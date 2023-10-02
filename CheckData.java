@@ -78,20 +78,7 @@ public class CheckData {
         return null;
     }
 
-    // Метод для записи данных в файл
 
-    public void writeToFile(String record, String fileName) {
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName + ".txt", true))) {
-            writer.write(record);
-            writer.newLine();
-            writer.close();
-        } catch (IOException e) {
-            System.out.println("Ошибка при записи в файл.");
-       }
-
-        System.out.println("Данные успешно записаны в файл.");
-    }
 }
 
 

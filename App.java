@@ -40,18 +40,17 @@ public class App {
     public static void main(String[] args) throws InvalidDataFormatException {
         // Запрос данных от пользователя
         // запускаем сервисы
-        Services service = new Services();
+        Services service = new Services(); // сервис ввода и записи в файл информации
 
-         //String input = "Иванов Иван Иванович 01.01.1990 1234567890 m";
         String input = service.inputFromUser();
 
         CheckData check = new CheckData(input);
 
         // если строка не нулевая значит все в порядке и можно записать данные в файл
-            if (check.check(input)!= null) {
+           String str = check.check(input);
+            if (str!= null) {
             System.out.println("Данные введены корректно");
-
-            check.writeToFile(check.check(input), check.getLastName());
+            service.writeToFile(str, check.getLastName());
         };
 
 
