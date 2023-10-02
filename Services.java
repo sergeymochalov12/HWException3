@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 public class Services {
 
-    public String inputFromUser (){
-
+    public String inputFromUser (String msg){
+        System.out.println("Введите данные в следующем формате:");
+        System.out.println(msg);
         Scanner in = new Scanner(System.in);
         return in.nextLine();
 

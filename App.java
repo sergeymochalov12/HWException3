@@ -42,7 +42,7 @@ public class App {
         // запускаем сервисы
         Services service = new Services(); // сервис ввода и записи в файл информации
 
-        String input = service.inputFromUser();
+        String input = service.inputFromUser("Формат:  <Фамилия><Имя><Отчество><датарождения> <номертелефона><пол>");
 
         CheckData check = new CheckData(input);
 
